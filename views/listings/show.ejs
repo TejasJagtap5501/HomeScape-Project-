@@ -1,0 +1,25 @@
+<% layout("/layouts/boilerPlate")%>
+<body>
+    <p class="show-head mt-3" style="text-align:center; font-size:30px; "><i><%=list.title%></i></p>
+
+    <div class="row">
+        <div class="col-5 offset-4">
+            <img src="<%=list.image.url%> alt="  alt="House Image" class="img"/>
+        </div>
+        <div class="show-body offset-3 mt-3">
+            <B>Description:</B><%=list.description%><br>
+            <b>Price:</b>&#8360;<%=list.price.toLocaleString("en-IN")%><br>
+            <b>location:</b><%=list.location%><br>
+            <b>country:</b><%=list.country%>
+        </div>
+    </div>
+    <div style="display:flex;">
+            <a href="/listings/<%=list.id%>/edit" class="btn offset-6" style="border:1px solid black; padding:0 1 0;">Edit</a>&nbsp;&nbsp;
+            <form method="POST" action="/listings/<%=list.id%>?_method=DELETE">
+                <button class="mt-0">Delete</button>
+                <br>
+            </form>
+    </div>
+</body>
+
+

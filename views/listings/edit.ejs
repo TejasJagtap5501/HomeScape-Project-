@@ -1,0 +1,38 @@
+<%layout("/layouts/boilerPlate.ejs")%>
+<body>
+    <h3 class="head mt-3" style="text-align:center">Create a new title </h3>
+    <div style="background-color:azure;" class="row">
+        <div class="col-8 offset-2">
+    <form method="POST" action="/listings/<%=list.id%>?_method=PUT">
+    <div>
+        <label for="title" class="form-label">Title:</label>
+        <input id="title" name="listing[title]" class="form-control" value=<%=list.title%>>
+    </div>
+    <div>
+        <label for="description" class="form-label">Description:</label>
+        <input id="description" name="listing[description]" class="form-control" value="<%=list.description%>">
+    </div>
+    <div>
+        <label for="image" class="form-label">Image:</label>
+        <input id="image" name="listing[image]" class="form-control" placeholder="Enter image Url">
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label for="Price:" class="form-label">Price:</label>
+            <input id="Price" name="listing[price]" class="form-control" value="<%=list.price%>">
+        </div>
+        <div class="col-md-8">
+            <label for="country" class="form-label">Country:</label>
+            <input id="country" name="listing[country]" class="form-control" value="<%=list.country%>">
+        </div>
+    </div>
+    <div>
+        <label for="location" class="form-label">Location:</label>
+        <input id="location" name="listing[location]" class="form-control" value="<%=list.location%>">
+    </div>
+    
+        <button class="btn btn-dark mt-3 mb-3 " id="button">Edit</button>
+    </form>
+    </div>
+    </div>
+</body>

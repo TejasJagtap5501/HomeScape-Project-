@@ -1,0 +1,46 @@
+<%layout("/layouts/boilerPlate.ejs")%>
+<body>
+    <h3 style="display:flex;margin-top:3px; justify-content:center; color:blue;">Create a new title </h3>
+    <div class="row">
+        <div class="col-8 offset-2">
+        <form method="POST" action="/listings">
+        <div>
+            <label for="title" class="form-label">Title:</label>
+            <input id="title" name="listing[title]" placeholder="Enter title" class="form-control">
+        </div>
+        <br>
+        <br>
+        <div>
+            <label for="description" class="form-label">Description:</label>
+            <input id="description" name="listing[description]" placeholder="Enter description" class="form-control">
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+            <label for="Price" class="form-label">Price:</label>
+            <input id="Price" name="listing[price]" placeholder="Enter price" class="form-control" type="number">
+            </div>
+            <div class="col-md-8">
+                <label for="country" class="form-label">Country:</label>
+                <input id="country" name="listing[country]" placeholder="Enter country" class="form-control">
+            </div>
+        </div>
+        <br>
+        <br>
+        <div>
+            <label for="location" class="form-label">Location:</label>
+            <input id="location" name="listing[location]" placeholder="Enter location" class="form-control">
+        </div>
+        <br>
+      
+    <button class="btn btn-dark" style="margin-bottom:10px" >Add</button>
+    </form>
+        </div>
+    </div>
+    
+
+    <!-- if you want to access all data from input just use name="listing[name] ""-->
+
+    
+</body>
